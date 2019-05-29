@@ -1,0 +1,19 @@
+{
+  "name": "developer-workflow",
+  "version": "1.0.0",
+  "description": "Houses all follow-along resources for the `Developer Workflow` workshop at Orchestructure, June 8th, 2019.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swiggins83/developer-workflow.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/swiggins83/developer-workflow/issues"
+  },
+  "homepage": "https://github.com/swiggins83/developer-workflow#readme"
+}
