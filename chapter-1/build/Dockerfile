@@ -1,14 +1,16 @@
 FROM node:8.16.0-alpine
 
+COPY webpack.config.js .
 COPY .eslintrc.yml .
+
 COPY package.json .
 
 RUN npm install
 
-COPY index.js .
+ADD src src
 
-RUN ./node_modules/.bin/eslint index.js
+RUN npm run build
 
 EXPOSE 8080
 
-CMD node index.js
+CMD node dist/bundle.js
