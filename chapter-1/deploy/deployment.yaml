@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: hi
-        image: hi
+        image: hi:latest
         imagePullPolicy: Never
         ports:
         - containerPort: 8080
