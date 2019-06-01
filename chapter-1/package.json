@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/swiggins83/developer-workflow/issues"
   },
-  "homepage": "https://github.com/swiggins83/developer-workflow#readme"
+  "homepage": "https://github.com/swiggins83/developer-workflow#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
