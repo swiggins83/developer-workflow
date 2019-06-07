@@ -1,34 +1,45 @@
-const path = require('path');
-const nodeExternals = require('webpack-node-externals');
+import webpack from 'webpack';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import LiveReloadPlugin from 'webpack-livereload-plugin';
 
-module.exports = {
-  target: "node",
-  entry: {
-    app: ["./src/index.js"]
-  },
+export default  {
+  entry: './src/client/index.js',
   output: {
-    path: path.resolve(__dirname, "./dist"),
-    filename: "bundle.js"
+    path: '/',
+    filename: 'bundle.js'
   },
   module: {
     rules: [
       {
-        enforce: "pre",
+        use: 'babel-loader',
         test: /\.js$/,
-        exclude: /node_modules/,
-        loader: "eslint-loader"
+        exclude: /node_modules/
       },
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
-        }
+        use: ['style-loader', 'css-loader'],
+        test: /\.css$/
+      },
+      {
+      	test: /\.scss$/,
+        use: [{
+            loader: "style-loader"
+        }, {
+            loader: "css-loader", options: {
+                sourceMap: true
+            }
+        }, {
+            loader: "sass-loader", options: {
+                sourceMap: true
+            }
+        }]
       }
     ]
   },
-  externals: [nodeExternals()],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'src/client/index.html'
+    }),
+    new LiveReloadPlugin()
+  ]
 };
+
