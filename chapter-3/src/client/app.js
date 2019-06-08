@@ -36,6 +36,10 @@ class App extends React.Component {
     this.setState({ timer: timerId });
   }
 
+  componentDidUnmount = function() {
+    clearInterval(this.state.timerId);
+  }
+
   render = function() {
     return (
       <div>
