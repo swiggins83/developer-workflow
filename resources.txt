@@ -1,0 +1,11 @@
+https://expressjs.com/en/api.html#req
+https://github.com/miscavage/CoinGecko-API
+https://stackoverflow.com/questions/41769880/how-to-manually-add-a-path-to-be-resolved-in-eslintrc
+https://www.npmjs.com/package/eslint-import-resolver-webpack
+https://github.com/benmosher/eslint-plugin-import/issues/352
+https://github.com/axios/axios
+https://dev.to/aurelkurtula/setting-up-a-minimal-node-environment-with-webpack-and-babel--1j04
+https://github.com/babel/babel/issues/8655
+https://babeljs.io/docs/en/config-files#project-wide-configuration
+https://stackoverflow.com/questions/40144138/pull-a-local-image-to-run-a-pod-in-kubernetes/40165862
+https://kubernetes.io/docs/concepts/containers/images/
