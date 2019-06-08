@@ -11,7 +11,12 @@ export default  {
   module: {
     rules: [
       {
-        use: 'babel-loader',
+        use: {
+          loader: 'babel-loader',
+          options: {
+            cacheDirectory: true
+          }
+        },
         test: /\.js$/,
         exclude: /node_modules/
       },

@@ -10,3 +10,7 @@ if [[ $(kubectl get pods -lapp=hello-node) == "No resources found." ]]; then
 fi
 
 kubectl set image deployment/hello-node hi=hi:$EPOCH
+
+sleep 10
+
+kubectl logs $(kubectl get pods -lapp=hello-node | awk -F ' ' '{print $1}' | sed -n 2p) -f
