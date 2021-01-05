@@ -18,7 +18,7 @@
   "homepage": "https://github.com/swiggins83/developer-workflow#readme",
   "dependencies": {
     "@material-ui/core": "^4.0.2",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "coingecko-api": "^1.0.5",
     "express": "^4.17.1",
     "react": "^16.8.6",
